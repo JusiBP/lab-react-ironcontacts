@@ -65,6 +65,10 @@
   border-radius: 20px;
 }
 
+.pictureAward {
+  width: 6vw;
+}
+
 .award{
   text-align: center;
 }
