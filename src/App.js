@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import dataContacts from "./contacts.json";
+
+const contacts = dataContacts.slice(0,10)
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <table className='table'>
+          <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Popularity</th>
+            <th>Oscars</th>
+            <th>Emmys</th>
+          </tr>
+          {contacts.map((contact) => {
+            return<tr>
+              <td><img className='picture' src={contact.pictureUrl} alt=""/></td>
+              <td>{contact.name}</td>
+              <td>{Math.round((contact.popularity) * 100) / 100}</td>
+              <td>{contact.wonOscar? <img className='picture' src="/oscar_icon.png" alt="" /> : ""}</td>
+              <td>{contact.wonEmmy? <img  className='picture' src="/emmy_icon.png" alt="" /> : ""}</td>
+            </tr>
+          })}
+          
+      </table>
     </div>
   );
 }

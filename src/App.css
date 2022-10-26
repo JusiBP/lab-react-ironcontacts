@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.table {
+  margin:auto;
+  background-color: #282c34;
+  width: 80vw;
+  color: white;
+  font-weight: bold;
+  font-size: medium;
+  text-align: left;
+}
+
+.table th {
+  background-color: #1c1e23;
+  font-size:large;
+  height: 10vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.table td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.picture {
+  width: 12vw;
+  border-radius: 20px;
+}
+
+.award{
+  text-align: center;
+}
