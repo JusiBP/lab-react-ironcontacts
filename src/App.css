@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.ImgDel {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -61,7 +67,7 @@
 }
 
 .picture {
-  width: 12vw;
+  width: 9vw;
   border-radius: 20px;
 }
 
