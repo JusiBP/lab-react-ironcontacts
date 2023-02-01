@@ -21,10 +21,27 @@ function App() {
     shallowContactsmod.push(randomContact)
     setContactsList(shallowContactsmod)
   }
+  const sortByNameHandler = () => {
+    let shallowContactsName = contactsList.map(a=> a).sort(function(a,b){
+      if(a.name< b.name) return -1;
+      if(a.name >b.name) return 1;
+    });
+    setContactsList(shallowContactsName)
+  }
+  const sortByPopHandler = () => {
+    let shallowContactsPop = contactsList.map(a=> a).sort(function(a,b){
+      if(a.popularity < b.popularity ) return 1;
+      if(a.popularity > b.popularity) return -1;
+    });
+    setContactsList(shallowContactsPop)
+  }
+
 
   return (
     <div className="App">
     <button onClick={addRandomHandler}>Add Random Contact</button>
+    <button onClick={sortByNameHandler}>Sort by Name</button>
+    <button onClick={sortByPopHandler}>Sort by Popularity</button>
       <table className='table'>
           <tr>
             <th>Picture</th>
